@@ -5,7 +5,7 @@ import codecs
 from collections import defaultdict, OrderedDict
 import copy
 import glob
-from le_utils.constants import licenses, content_kinds, file_formats
+from le_utils.constants import licenses, content_kinds, file_formats, roles
 import hashlib
 import json
 import logging
@@ -162,6 +162,7 @@ class Lesson(Node):
                 language=self.lang,
                 author=AUTHOR,
                 license=LICENSE,
+                role=roles.COACH,
                 children=children
             )
 
