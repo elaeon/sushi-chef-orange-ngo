@@ -79,6 +79,7 @@ class Node(object):
             language=self.lang,
             author=AUTHOR,
             license=LICENSE,
+            role=roles.COACH,
             children=list(self.tree_nodes.values())
         )
     
@@ -210,6 +211,7 @@ class File(Node):
                     path=self.filepath
                 )],
                 language=self.lang,
+                role=roles.COACH,
                 license=LICENSE)
             return node
 
@@ -336,6 +338,7 @@ class YouTubeResourceNode(YouTubeResource):
                 author=AUTHOR,
                 files=files,
                 language=self.lang,
+                role=roles.COACH,
                 license=LICENSE
             )
             return node
